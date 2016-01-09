@@ -1,0 +1,35 @@
+Les données des maires de France sont récoltées à partir de:
+
+1) La liste des codes INSEE des villes de france
+2) Les pages de l'AMF [1] correspondant à chaque code INSEE
+
+Lancer 'make' peut prendre *beaucoup* de temps. Le volume des données à
+télécharger est d'environ 800MB.
+
+Les données de l'AMF [1] ne sont pas d'excellente qualité.
+
+Quelques remarques:
+
+- Les codes INSEE des villes:
+
+    - Ils considèrent que ce sont des entiers. 06000 devient 6000
+    - Les codes corses en 2A??? et 2B??? deviennent 20???
+
+- Certains maires s'appellent "M. LE MAIRE" (beaucoup trop pour que ce soit un
+  hasard)
+
+    http://www.amf.asso.fr/annuaire/index.asp?refer=commune&dep_n_id=&NUM_INSEE=04126
+    http://www.amf.asso.fr/annuaire/index.asp?refer=commune&dep_n_id=&NUM_INSEE=59646
+    http://www.amf.asso.fr/annuaire/index.asp?refer=commune&dep_n_id=&NUM_INSEE=31137
+
+- Certains maires ont un prénom en majuscules. Difficile de distinguer prénom et
+  nom, du coup.
+
+    http://www.amf.asso.fr/annuaire/index.asp?refer=commune&dep_n_id=&NUM_INSEE=08104
+
+- Certaines pagent web 'plantent'. On pourrait éventuellement en faire la liste
+  et la leur donner.
+
+    http://www.amf.asso.fr/annuaire/index.asp?refer=commune&dep_n_id=&NUM_INSEE=28258
+
+[1] http://www.amf.asso.fr/

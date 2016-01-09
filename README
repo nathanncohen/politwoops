@@ -1,0 +1,18 @@
+Ce repository contient plusieurs scripts permettant de lister certains
+responsables politiques. Chaque dossier contient quand c'est nécesaire un
+fichier README expliquant comment ces données sont récoltées.
+
+La liste des maires de France obtenue par l'AMF n'est pas d'extrêmement bonne
+qualité (leur site dit qu'elle est 'en cours'). Je ne sais pas en quoi leurs
+données diffèrent de celles publiées par ideelibres.org (merci popeye), que l'on
+peut soupconner d'etre de bien meilleure qualité.
+
+    https://www.data.gouv.fr/fr/organizations/ideeslibres-org/#datasets
+
+En particulier, je ne sais pas si les données de l'AMF sont mises à jour plus
+fréquemment.
+
+- Partis politiques: je n'arrive pas à trouver de source 'correcte' pour lister
+  les partis politiques. Les principaux partis politiques ont, en revanche, une
+  page wikipedia indiquant leur président (facile à parser), qui doit être à
+  jour en permanence.

@@ -28,7 +28,10 @@ for filename in os.listdir('website/'):
     maire = get_entry(soup, "Nom du Maire :")
     regexp = re.compile('^([^\xa0]*)\xa0(.*[a-zé])\xa0(.*)$',re.UNICODE)
     print(filename)
-    sexe,prenom,nom = re.match(regexp,maire).groups() # add checks.... !!!!!!!!!!!!!!!!!!!
+    try:
+        sexe,prenom,nom = re.match(regexp,maire).groups()
+    except AttributeError:
+        sexe, prenom, nom = 'M.', '?','?'
     if sexe == 'Mme':
         sexe = 'F'
     elif sexe == 'M.':
